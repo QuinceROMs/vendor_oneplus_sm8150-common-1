@@ -710,6 +710,8 @@ PRODUCT_PACKAGES += \
     libapps_mem_heap \
     libarcsoft_dualcam_refocus_skel \
     libarcsoft_hdrplus_hvx_skel \
+    libcalculator_domains_skel \
+    libcalculator_skel.so \
     libcamera_nn_skel \
     libcvpdsp_skel \
     libdspCV_skel \
@@ -722,6 +724,11 @@ PRODUCT_PACKAGES += \
     libproxy_skel \
     libscveObjectSegmentation_skel \
     libscveT2T_skel \
+    libsnpe_adsp \
+    libsnpe_dsp_domains_skel \
+    libsnpe_dsp_skel \
+    libsnpe_dsp_v65_domains_v2_skel \
+    libsnpe_dsp_v66_domains_v2_skel \
     libsns_device_mode_skel \
     libsns_low_lat_stream_skel \
     libmmosal \
@@ -914,6 +921,7 @@ PRODUCT_PACKAGES += \
     dpmd \
     tcmd \
     wfdservice \
+    android.hardware.camera.provider@2.4-service_64 \
     android.hardware.drm@1.3-service.widevine \
     vendor.oplus.hardware.biometrics.fingerprint@2.1-service \
     vendor.oplus.hardware.oplusSensor@1.0-service \
@@ -921,6 +929,30 @@ PRODUCT_PACKAGES += \
     init.oplus.wifi \
     oplus_sensor_fb \
     vl53l1_daemon_main
+
+PRODUCT_PACKAGES += \
+    OnePlusCamera \
+    OnePlusCameraService \
+    CameraExtensionsProxy \
+    android.hardware.camera.provider@2.4-external \
+    android.hardware.camera.provider@2.4-legacy \
+    camera.device@1.0-impl \
+    camera.device@3.2-impl \
+    camera.device@3.3-impl \
+    camera.device@3.4-external-impl \
+    camera.device@3.4-impl \
+    camera.device@3.5-external-impl \
+    camera.device@3.5-impl \
+    camera.device@3.6-external-impl \
+    libCameraMDMHelper@2.0 \
+    libcamera2ndk_vendor \
+    libhdrdynamic \
+    libhdrdynamicootf \
+    libSTDualCamCaptureWT \
+    libstblur_capture_api \
+    libtriplecam_image_optical_zoom \
+    libvppimmotion \
+    libvpptestutils
 
 PRODUCT_PACKAGES += \
     system_ext_priv-app_ims_lib_arm64_libimscamera_jni_so \

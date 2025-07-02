@@ -4235,6 +4235,42 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libSTDualCamCaptureWT",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libSTDualCamCaptureWT.so",
+            ],
+            shared_libs: [
+                "libz",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libhardware",
+                "libcamera_metadata",
+                "libOpenCL",
+                "libion",
+                "libqdMetaData",
+                "libmpbase",
+                "libstblur_capture_api",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libstagefright_soft_ac4dec",
     owner: "oneplus",
     strip: {
@@ -4298,6 +4334,153 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "32",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libstblur_capture_api",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libstblur_capture_api.so",
+            ],
+            shared_libs: [
+                "libEGL",
+                "libGLESv2",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libhardware",
+                "libcamera_metadata",
+                "libOpenCL",
+                "libion",
+                "libqdMetaData",
+                "libmpbase",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libtriplecam_image_optical_zoom",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libtriplecam_image_optical_zoom.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libhardware",
+                "libcamera_metadata",
+                "libOpenCL",
+                "libion",
+                "libqdMetaData",
+                "libmpbase",
+                "libtriplecam_video_optical_zoom",
+                "libarcsoft_piczoom",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libvppimmotion",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libvppimmotion.so",
+            ],
+            shared_libs: [
+                "libadsprpc",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libhardware",
+                "libvpplibrary",
+                "libvppclient",
+                "libqdMetaData",
+                "libion",
+                "libhidlbase",
+                "vendor.qti.hardware.vpp@1.1",
+                "vendor.qti.hardware.vpp@1.2",
+                "vendor.qti.hardware.vpp@1.3",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libvpptestutils",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libvpptestutils.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libhardware",
+                "libvpplibrary",
+                "libvppclient",
+                "libqdMetaData",
+                "libion",
+                "libhidlbase",
+                "vendor.qti.hardware.vpp@1.1",
+                "vendor.qti.hardware.vpp@1.2",
+                "vendor.qti.hardware.vpp@1.3",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
     prefer: true,
     soc_specific: true,
 }
@@ -5243,6 +5426,526 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "32",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "android.hardware.camera.provider@2.4-external",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/android.hardware.camera.provider@2.4-external.so",
+            ],
+            shared_libs: [
+                "android.hardware.camera.provider@2.4",
+                "android.hardware.camera.device@1.0",
+                "android.hardware.camera.device@3.2",
+                "android.hardware.camera.device@3.3",
+                "android.hardware.camera.device@3.4",
+                "android.hardware.camera.device@3.5",
+                "android.hardware.camera.device@3.6",
+                "android.hardware.camera.common@1.0",
+                "camera.device@3.3-impl",
+                "camera.device@3.4-external-impl",
+                "camera.device@3.4-impl",
+                "camera.device@3.5-external-impl",
+                "camera.device@3.5-impl",
+                "camera.device@3.6-external-impl",
+                "android.hardware.graphics.mapper@2.0",
+                "android.hardware.graphics.mapper@3.0",
+                "android.hardware.graphics.mapper@4.0",
+                "android.hidl.allocator@1.0",
+                "android.hidl.memory@1.0",
+                "libhardware",
+                "libtinyxml2",
+                "libhidlbase",
+                "libhidltransport",
+                "libhwbinder",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libbase",
+                "libcamera_metadata",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "android.hardware.camera.provider@2.4-legacy",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/android.hardware.camera.provider@2.4-legacy.so",
+            ],
+            shared_libs: [
+                "android.hardware.camera.provider@2.4",
+                "android.hardware.camera.device@1.0",
+                "android.hardware.camera.device@3.2",
+                "android.hardware.camera.device@3.3",
+                "android.hardware.camera.device@3.4",
+                "android.hardware.camera.device@3.5",
+                "android.hardware.camera.common@1.0",
+                "vendor.qti.hardware.camera.device@1.0",
+                "android.hardware.graphics.mapper@2.0",
+                "android.hardware.graphics.mapper@3.0",
+                "android.hardware.graphics.mapper@4.0",
+                "android.hidl.allocator@1.0",
+                "android.hidl.memory@1.0",
+                "camera.device@1.0-impl",
+                "camera.device@3.2-impl",
+                "camera.device@3.3-impl",
+                "camera.device@3.4-impl",
+                "camera.device@3.5-impl",
+                "libhidlbase",
+                "libhidltransport",
+                "libhwbinder",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libbase",
+                "libcamera_metadata",
+                "libhardware",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "camera.device@1.0-impl",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/camera.device@1.0-impl.so",
+            ],
+            shared_libs: [
+                "android.hardware.camera.device@1.0",
+                "android.hardware.camera.common@1.0",
+                "vendor.qti.hardware.camera.device@1.0",
+                "android.hardware.graphics.allocator@2.0",
+                "android.hardware.graphics.mapper@2.0",
+                "android.hardware.graphics.mapper@3.0",
+                "android.hardware.graphics.mapper@4.0",
+                "android.hardware.graphics.common@1.0",
+                "android.hidl.allocator@1.0",
+                "android.hidl.memory@1.0",
+                "libhidlmemory",
+                "libgralloctypes",
+                "libhidlbase",
+                "libhidltransport",
+                "libhwbinder",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libbase",
+                "libcamera_metadata",
+                "libhardware",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "camera.device@3.2-impl",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/camera.device@3.2-impl.so",
+            ],
+            shared_libs: [
+                "android.hardware.camera.device@3.2",
+                "android.hardware.camera.common@1.0",
+                "android.hardware.camera.metadata@3.2",
+                "android.hardware.camera.provider@2.4",
+                "android.hardware.graphics.mapper@2.0",
+                "android.hardware.graphics.mapper@3.0",
+                "android.hardware.graphics.mapper@4.0",
+                "libgralloctypes",
+                "libfmq",
+                "libhidlbase",
+                "libhidltransport",
+                "libhwbinder",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libbase",
+                "libcamera_metadata",
+                "libhardware",
+                "libsync",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "camera.device@3.3-impl",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/camera.device@3.3-impl.so",
+            ],
+            shared_libs: [
+                "android.hardware.camera.device@3.3",
+                "android.hardware.camera.device@3.2",
+                "android.hardware.camera.common@1.0",
+                "android.hardware.camera.metadata@3.3",
+                "android.hardware.camera.metadata@3.2",
+                "android.hardware.camera.provider@2.4",
+                "android.hardware.graphics.mapper@2.0",
+                "android.hardware.graphics.mapper@3.0",
+                "android.hardware.graphics.mapper@4.0",
+                "camera.device@3.2-impl",
+                "libgralloctypes",
+                "libfmq",
+                "libhidlbase",
+                "libhidltransport",
+                "libhwbinder",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libbase",
+                "libcamera_metadata",
+                "libhardware",
+                "libsync",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "camera.device@3.4-external-impl",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/camera.device@3.4-external-impl.so",
+            ],
+            shared_libs: [
+                "android.hardware.camera.device@3.4",
+                "android.hardware.camera.device@3.3",
+                "android.hardware.camera.device@3.2",
+                "android.hardware.camera.common@1.0",
+                "android.hardware.camera.metadata@3.4",
+                "android.hardware.camera.metadata@3.3",
+                "android.hardware.camera.metadata@3.2",
+                "android.hardware.camera.provider@2.4",
+                "android.hardware.graphics.mapper@2.0",
+                "android.hardware.graphics.mapper@3.0",
+                "android.hardware.graphics.mapper@4.0",
+                "camera.device@3.2-impl",
+                "camera.device@3.3-impl",
+                "camera.device@3.4-impl",
+                "libgralloctypes",
+                "libfmq",
+                "libyuv",
+                "libjpeg",
+                "libexif",
+                "libtinyxml2",
+                "libhidlbase",
+                "libhidltransport",
+                "libhwbinder",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libbase",
+                "libcamera_metadata",
+                "libhardware",
+                "libsync",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "camera.device@3.4-impl",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/camera.device@3.4-impl.so",
+            ],
+            shared_libs: [
+                "android.hardware.camera.device@3.4",
+                "android.hardware.camera.device@3.3",
+                "android.hardware.camera.device@3.2",
+                "android.hardware.camera.common@1.0",
+                "android.hardware.camera.metadata@3.4",
+                "android.hardware.camera.metadata@3.3",
+                "android.hardware.camera.metadata@3.2",
+                "android.hardware.camera.provider@2.4",
+                "android.hardware.graphics.mapper@2.0",
+                "android.hardware.graphics.mapper@3.0",
+                "android.hardware.graphics.mapper@4.0",
+                "camera.device@3.2-impl",
+                "camera.device@3.3-impl",
+                "libgralloctypes",
+                "libfmq",
+                "libhidlbase",
+                "libhidltransport",
+                "libhwbinder",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libbase",
+                "libcamera_metadata",
+                "libhardware",
+                "libsync",
+                "libqdMetaData",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "camera.device@3.5-external-impl",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/camera.device@3.5-external-impl.so",
+            ],
+            shared_libs: [
+                "android.hardware.camera.device@3.5",
+                "android.hardware.camera.device@3.4",
+                "android.hardware.camera.device@3.3",
+                "android.hardware.camera.device@3.2",
+                "android.hardware.camera.common@1.0",
+                "android.hardware.camera.metadata@3.5",
+                "android.hardware.camera.metadata@3.4",
+                "android.hardware.camera.metadata@3.3",
+                "android.hardware.camera.metadata@3.2",
+                "android.hardware.camera.provider@2.4",
+                "android.hardware.graphics.mapper@2.0",
+                "android.hardware.graphics.mapper@3.0",
+                "android.hardware.graphics.mapper@4.0",
+                "camera.device@3.2-impl",
+                "camera.device@3.3-impl",
+                "camera.device@3.4-external-impl",
+                "libgralloctypes",
+                "libfmq",
+                "libyuv",
+                "libjpeg",
+                "libexif",
+                "libtinyxml2",
+                "libhidlbase",
+                "libhidltransport",
+                "libhwbinder",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libbase",
+                "libcamera_metadata",
+                "libhardware",
+                "libsync",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "camera.device@3.5-impl",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/camera.device@3.5-impl.so",
+            ],
+            shared_libs: [
+                "android.hardware.camera.device@3.5",
+                "android.hardware.camera.device@3.4",
+                "android.hardware.camera.device@3.3",
+                "android.hardware.camera.device@3.2",
+                "android.hardware.camera.common@1.0",
+                "android.hardware.camera.metadata@3.5",
+                "android.hardware.camera.metadata@3.4",
+                "android.hardware.camera.metadata@3.3",
+                "android.hardware.camera.metadata@3.2",
+                "android.hardware.camera.provider@2.4",
+                "android.hardware.graphics.mapper@2.0",
+                "android.hardware.graphics.mapper@3.0",
+                "android.hardware.graphics.mapper@4.0",
+                "camera.device@3.2-impl",
+                "camera.device@3.3-impl",
+                "camera.device@3.4-impl",
+                "vendor.oplus.hardware.cameraMDM@2.0",
+                "libgralloctypes",
+                "libhidlbase",
+                "libhidltransport",
+                "libhwbinder",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libbase",
+                "libcamera_metadata",
+                "libhardware",
+                "libsync",
+                "libqdMetaData",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "camera.device@3.6-external-impl",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/camera.device@3.6-external-impl.so",
+            ],
+            shared_libs: [
+                "android.hardware.camera.device@3.6",
+                "android.hardware.camera.device@3.5",
+                "android.hardware.camera.device@3.4",
+                "android.hardware.camera.device@3.3",
+                "android.hardware.camera.device@3.2",
+                "android.hardware.camera.common@1.0",
+                "android.hardware.camera.metadata@3.6",
+                "android.hardware.camera.metadata@3.5",
+                "android.hardware.camera.metadata@3.4",
+                "android.hardware.camera.metadata@3.3",
+                "android.hardware.camera.metadata@3.2",
+                "android.hardware.camera.provider@2.4",
+                "android.hardware.graphics.mapper@2.0",
+                "android.hardware.graphics.mapper@3.0",
+                "android.hardware.graphics.mapper@4.0",
+                "camera.device@3.2-impl",
+                "camera.device@3.3-impl",
+                "camera.device@3.4-external-impl",
+                "camera.device@3.5-external-impl",
+                "libgralloctypes",
+                "libfmq",
+                "libyuv",
+                "libjpeg",
+                "libexif",
+                "libtinyxml2",
+                "libhidlbase",
+                "libhidltransport",
+                "libhwbinder",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libbase",
+                "libcamera_metadata",
+                "libhardware",
+                "libsync",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
     prefer: true,
     soc_specific: true,
 }
@@ -7742,6 +8445,102 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libAncHumBokeh-jni",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libAncHumBokeh-jni.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libAncHumBokeh",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libAncHumBokeh-jni.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libAncHumBokeh",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    vendor: true,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libAncHumBokeh",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libAncHumBokeh.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libhardware",
+                "libcamera_metadata",
+                "libOpenCL",
+                "libion",
+                "libancbase_rt_bokeh",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libAncHumBokeh.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libhardware",
+                "libcamera_metadata",
+                "libOpenCL",
+                "libion",
+                "libancbase_rt_bokeh",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    vendor: true,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libGPQTEEC_vendor",
     owner: "oneplus",
     strip: {
@@ -8040,6 +8839,102 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libaiseg",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libaiseg.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libOpenCL",
+                "libion",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libaiseg.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libOpenCL",
+                "libion",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    vendor: true,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libancbase_rt_bokeh",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libancbase_rt_bokeh.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libhardware",
+                "libcamera_metadata",
+                "libOpenCL",
+                "libion",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libancbase_rt_bokeh.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libhardware",
+                "libcamera_metadata",
+                "libOpenCL",
+                "libion",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    vendor: true,
     prefer: true,
     soc_specific: true,
 }
@@ -8378,6 +9273,7 @@ cc_prebuilt_library_shared {
     compile_multilib: "64",
     prefer: true,
     soc_specific: true,
+    allow_undefined_symbols: true,
 }
 
 cc_prebuilt_library_shared {
@@ -8538,6 +9434,42 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libCameraMDMHelper@2.0",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libCameraMDMHelper@2.0.so",
+            ],
+            shared_libs: [
+                "vendor.oplus.hardware.cameraMDM@2.0",
+                "libhidlbase",
+                "libhidltransport",
+                "libhwbinder",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libbase",
+                "libbinder",
+                "libcamera_metadata",
+                "libhardware",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libcamera_nn_stub",
     owner: "oneplus",
     strip: {
@@ -8567,6 +9499,48 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcamera2ndk_vendor",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libcamera2ndk_vendor.so",
+            ],
+            shared_libs: [
+                "android.frameworks.cameraservice.device@2.0",
+                "android.frameworks.cameraservice.common@2.0",
+                "android.frameworks.cameraservice.service@2.0",
+                "android.frameworks.cameraservice.service@2.1",
+                "libfmq",
+                "libhidlbase",
+                "libstagefright_foundation",
+                "libcamera2ndk",
+                "libcamera_metadata",
+                "libmediandk",
+                "libnativewindow",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libbase",
+                "libhardware",
+                "libsync",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
     prefer: true,
     soc_specific: true,
 }
@@ -8943,6 +9917,81 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libhdrdynamic",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libhdrdynamic.so",
+            ],
+            shared_libs: [
+                "libsdm-color",
+                "libtinyxml2_1",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libhardware",
+                "libcamera_metadata",
+                "libOpenCL",
+                "libion",
+                "libmpbase",
+                "libarcsoft_high_dynamic_range",
+                "libqdMetaData",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libhdrdynamicootf",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libhdrdynamicootf.so",
+            ],
+            shared_libs: [
+                "libsdm-color",
+                "libtinyxml2_1",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libhardware",
+                "libcamera_metadata",
+                "libOpenCL",
+                "libion",
+                "libmpbase",
+                "libhdrdynamic",
+                "libarcsoft_high_dynamic_range",
+                "libqdMetaData",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    vendor: true,
     prefer: true,
     soc_specific: true,
 }
@@ -14504,6 +15553,24 @@ prebuilt_rfsa {
 }
 
 prebuilt_rfsa {
+    name: "libcalculator_skel",
+    filename: "libcalculator_skel.so",
+    owner: "oneplus",
+    src: "proprietary/vendor/lib/rfsa/adsp/libcalculator_skel.so",
+    relative_install_path: "adsp",
+    soc_specific: true,
+}
+
+prebuilt_rfsa {
+    name: "libcalculator_domains_skel",
+    filename: "libcalculator_domains_skel",
+    owner: "oneplus",
+    src: "proprietary/vendor/lib/rfsa/adsp/libcalculator_domains_skel.so",
+    relative_install_path: "adsp",
+    soc_specific: true,
+}
+
+prebuilt_rfsa {
     name: "libSuperSensor_skel",
     filename: "libSuperSensor_skel.so",
     owner: "oneplus",
@@ -14661,6 +15728,60 @@ prebuilt_rfsa {
     filename: "libscveT2T_skel.so",
     owner: "oneplus",
     src: "proprietary/vendor/lib/rfsa/adsp/libscveT2T_skel.so",
+    relative_install_path: "adsp",
+    soc_specific: true,
+}
+
+prebuilt_rfsa {
+    name: "libsnpe_adsp",
+    filename: "libsnpe_adsp",
+    owner: "oneplus",
+    src: "proprietary/vendor/lib/rfsa/adsp/libsnpe_adsp.so",
+    relative_install_path: "adsp",
+    soc_specific: true,
+}
+
+prebuilt_rfsa {
+    name: "libsnpe_dsp_domains_skel",
+    filename: "libsnpe_dsp_domains_skel",
+    owner: "oneplus",
+    src: "proprietary/vendor/lib/rfsa/adsp/libsnpe_dsp_domains_skel.so",
+    relative_install_path: "adsp",
+    soc_specific: true,
+}
+
+prebuilt_rfsa {
+    name: "libsnpe_dsp_skel",
+    filename: "libsnpe_dsp_skel",
+    owner: "oneplus",
+    src: "proprietary/vendor/lib/rfsa/adsp/libsnpe_dsp_skel.so",
+    relative_install_path: "adsp",
+    soc_specific: true,
+}
+
+prebuilt_rfsa {
+    name: "libsnpe_dsp_skel",
+    filename: "libsnpe_dsp_skel",
+    owner: "oneplus",
+    src: "proprietary/vendor/lib/rfsa/adsp/libsnpe_dsp_skel.so",
+    relative_install_path: "adsp",
+    soc_specific: true,
+}
+
+prebuilt_rfsa {
+    name: "libsnpe_dsp_v65_domains_v2_skel",
+    filename: "libsnpe_dsp_v65_domains_v2_skel.so",
+    owner: "oneplus",
+    src: "proprietary/vendor/lib/rfsa/adsp/libsnpe_dsp_v65_domains_v2_skel.so",
+    relative_install_path: "adsp",
+    soc_specific: true,
+}
+
+prebuilt_rfsa {
+    name: "libsnpe_dsp_v66_domains_v2_skel",
+    filename: "libsnpe_dsp_v66_domains_v2_skel.so",
+    owner: "oneplus",
+    src: "proprietary/vendor/lib/rfsa/adsp/libsnpe_dsp_v66_domains_v2_skel.so",
     relative_install_path: "adsp",
     soc_specific: true,
 }
@@ -17799,6 +18920,45 @@ android_app_import {
     },
     privileged: true,
     product_specific: true,
+}
+
+android_app_import {
+    name: "OnePlusCamera",
+    owner: "oneplus",
+    apk: "proprietary/product/priv-app/OnePlusCamera/OnePlusCamera.apk",
+    certificate: "platform",
+    dex_preopt: {
+        enabled: false,
+    },
+    privileged: true,
+    product_specific: true,
+    required: [
+        "OnePlusCameraService",
+        "CameraExtensionsProxy",
+    ],
+}
+
+android_app_import {
+    name: "OnePlusCameraService",
+    owner: "oneplus",
+    apk: "proprietary/product/priv-app/OnePlusCameraService/OnePlusCameraService.apk",
+    certificate: "platform",
+    dex_preopt: {
+        enabled: false,
+    },
+    privileged: true,
+    product_specific: true,
+}
+
+android_app_import {
+    name: "CameraExtensionsProxy",
+    owner: "oneplus",
+    apk: "proprietary/system/app/CameraExtensionsProxy/CameraExtensionsProxy.apk",
+    certificate: "platform",
+    dex_preopt: {
+        enabled: false,
+    },
+    system_ext_specific: true,
 }
 
 android_app_import {
