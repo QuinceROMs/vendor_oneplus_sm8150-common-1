@@ -262,8 +262,6 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     btaudio_offload_if \
-    libldacBT_abr \
-    libldacBT_enc \
     eglSubDriverAndroid \
     libEGL_adreno \
     libGLESv1_CM_adreno \
