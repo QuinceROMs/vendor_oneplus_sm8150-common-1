@@ -18379,6 +18379,7 @@ cc_prebuilt_binary {
                 "libc",
                 "libm",
                 "libdl",
+                "libstagefright_foundation-v33",
             ],
         },
     },
