@@ -384,9 +384,6 @@ PRODUCT_PACKAGES += \
     libwfduibcsrcinterface_proprietary \
     libwfdutils_proprietary \
     libasphere \
-    libqcbassboost \
-    libqcreverb \
-    libqcvirt \
     libshoebox \
     libswdap \
     libswgamedap \
@@ -626,6 +623,9 @@ PRODUCT_PACKAGES += \
     qtibus \
     qtimutex \
     sensors.ssc \
+    libqcbassboost \
+    libqcreverb \
+    libqcvirt \
     unnhal-acc-adreno \
     unnhal-acc-common \
     unnhal-acc-hta \
