@@ -248,7 +248,10 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8150-common/proprietary/vendor/radio/qcril_database/upgrade/4_version_update_ecc_table.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/4_version_update_ecc_table.sql \
     vendor/oneplus/sm8150-common/proprietary/vendor/radio/qcril_database/upgrade/5_version_update_ecc_table.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/5_version_update_ecc_table.sql \
     vendor/oneplus/sm8150-common/proprietary/vendor/radio/qcril_database/upgrade/6_version_update_ecc_table.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/6_version_update_ecc_table.sql \
-    vendor/oneplus/sm8150-common/proprietary/vendor/radio/qcril_database/upgrade/7_version_update_ecc_table.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/7_version_update_ecc_table.sql
+    vendor/oneplus/sm8150-common/proprietary/vendor/radio/qcril_database/upgrade/7_version_update_ecc_table.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/7_version_update_ecc_table.sql \
+    vendor/oneplus/sm8150-common/proprietary/product/etc/default-permissions/com.oneplus.camera.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/default-permissions/com.oneplus.camera.xml \
+    vendor/oneplus/sm8150-common/proprietary/product/etc/permissions/com.oneplus.camera.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.oneplus.camera.xml \
+    vendor/oneplus/sm8150-common/proprietary/product/etc/permissions/com.oneplus.camera.service.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.oneplus.camera.service.xml \
 
 PRODUCT_PACKAGES += \
     eglSubDriverAndroid \
@@ -605,6 +608,7 @@ PRODUCT_PACKAGES += \
     libssc \
     libssc_default_listener \
     libssd \
+    libstblur_capture_api \
     libswregistrationalgo \
     libsystem_health_mon \
     libtime_genoff \
@@ -613,6 +617,7 @@ PRODUCT_PACKAGES += \
     libtriplecam_video_optical_zoom \
     libtrustedapploader \
     libvidhance \
+    libvppimmotion \
     libwms \
     libwqe \
     libxtadapter \
@@ -639,6 +644,38 @@ PRODUCT_PACKAGES += \
     vendor.dolby.hardware.dms@2.0-impl \
     vendor.oplus.hardware.cameraMDM@2.0 \
     vendor.oplus.hardware.cammidasservice@1.0 \
+    vendor.oplus.hardware.cammidasservice@1.0_system \
+    prebuilt_libAncFilter_jni \
+    prebuilt_libAncHumanDoubleExposure-jni \
+    prebuilt_libAncHumanRetain-jni_v2 \
+    prebuilt_libAncHumanSegFigureFusion-jni \
+    prebuilt_libAncHumanVideo-jni \
+    prebuilt_libAncHumBokeh-jni \
+    prebuilt_libAPSClient-cmd-jni \
+    prebuilt_libAPSClient-jni \
+    prebuilt_libApsFaceBeautyPreviewProductJni \
+    prebuilt_libextendfile \
+    prebuilt_libFileExtender-jni \
+    prebuilt_libjnisingleblur_api \
+    prebuilt_libjnistblur_api \
+    prebuilt_libmpbase \
+    prebuilt_libOplusBlurPreviewJNI \
+    prebuilt_liboplusCode \
+    prebuilt_libsingle_camera_bokeh_native \
+    prebuilt_libSuperTextWrapper \
+    prebuilt_libXDocProcessSDK-jni \
+    prebuilt_libXDocProcessSDK \
+    prebuilt_libYTCommon \
+    prebuilt_EngCameraClient_sysext \
+    prebuilt_libjnistblur_api.qti_sysext \
+    prebuilt_vendor.oplus.hardware.cameraMDM@1.0_sysext \
+    prebuilt_vendor.oplus.hardware.cameraMDM@2.0_sysext \
+    prebuilt_vendor.oplus.hardware.engcamera@1.0_sysext \
+    prebuilt_libOplusSloganClient_sysext \
+    prebuilt_libSloganJni.oplus_sysext \
+    prebuilt_vendor.oplus.hardware.camera.slogan@1.0_sysext \
+    prebuilt_libsnpe_dsp_v66_domains_v2_skel \
+    prebuilt_libCameraMDMHelper@2.0 \
     vendor.qti.data.factory@2.0 \
     vendor.qti.data.factory@2.1 \
     vendor.qti.data.mwqem@1.0 \
