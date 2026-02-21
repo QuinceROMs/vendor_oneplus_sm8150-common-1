@@ -828,11 +828,6 @@ PRODUCT_PACKAGES += \
     fingerprint.20828_goodix9678.default \
     fingerprint.goodix9608_G5.default \
     fingerprint.goodix9638_G6.default \
-    libarcsoft_dualcam_bokeh_api \
-    libarcsoft_dualcam_refocus_left \
-    libarcsoft_dualcam_refocus_preview \
-    libarcsoft_dualcam_refocus_right \
-    libarcsoft_dualcam_refocus_uw \
     libgf_hal_19805_G6_3_oplus \
     libgf_hal_19805_G6_7_oplus \
     libgf_hal_19811_G6_oplus \
