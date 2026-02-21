@@ -252,6 +252,7 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8150-common/proprietary/product/etc/default-permissions/com.oneplus.camera.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/default-permissions/com.oneplus.camera.xml \
     vendor/oneplus/sm8150-common/proprietary/product/etc/permissions/com.oneplus.camera.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.oneplus.camera.xml \
     vendor/oneplus/sm8150-common/proprietary/product/etc/permissions/com.oneplus.camera.service.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.oneplus.camera.service.xml \
+    vendor/oneplus/sm8150-common/proprietary/product/etc/sysconfig/oneplus-hiddenapi.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/oneplus-hiddenapi.xml
 
 PRODUCT_PACKAGES += \
     eglSubDriverAndroid \
