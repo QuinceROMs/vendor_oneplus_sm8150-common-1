@@ -11855,6 +11855,268 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libSTDualCamCaptureWT",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libSTDualCamCaptureWT.so",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libSTDualCamCaptureWT.so",
+            ],
+        },
+    },
+    shared_libs: [
+        "liblog",
+        "libz",
+        "libm",
+        "libc",
+        "libdl",
+    ],
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libSuperSensor",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libSuperSensor.so",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libSuperSensor.so",
+            ],
+        },
+    },
+    shared_libs: [
+        "liblog",
+        "libm",
+        "libc",
+        "libdl",
+    ],
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libSuperSensorFallback",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libSuperSensorFallback.so",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libSuperSensorFallback.so",
+            ],
+        },
+    },
+    shared_libs: [
+        "liblog",
+        "libm",
+        "libdl",
+        "libc",
+    ],
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libSuperSensorProcessor",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libSuperSensorProcessor.so",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libSuperSensorProcessor.so",
+            ],
+        },
+    },
+    shared_libs: [
+        "libSuperSensor",
+        "libSuperSensorFallback",
+        "liblog",
+        "libm",
+        "libdl",
+        "libc",
+    ],
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libSuperSensorProcessorCWrapper",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libSuperSensorProcessorCWrapper.so",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libSuperSensorProcessorCWrapper.so",
+            ],
+        },
+    },
+    shared_libs: [
+        "libSuperSensorProcessor",
+        "libSuperSensor",
+        "libSuperSensorFallback",
+        "liblog",
+        "libm",
+        "libdl",
+        "libc",
+    ],
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "lib_oneplus_watermark",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/lib_oneplus_watermark.so",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/lib_oneplus_watermark.so",
+            ],
+        },
+    },
+    shared_libs: [
+        "liblog",
+        "libc++",
+        "libc",
+        "libm",
+        "libdl",
+    ],
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsdk_sr",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libsdk_sr.so",
+            ],
+        },
+    },
+    shared_libs: [
+        "libion",
+        "libGLESv2",
+        "libEGL",
+        "libOpenCL",
+        "liblog",
+        "libm",
+        "libc",
+        "libdl",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libst_relighting",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libst_relighting.so",
+            ],
+        },
+    },
+    shared_libs: [
+        "liblog",
+        "libOpenCL",
+        "libcvface_api",
+        "libm",
+        "libdl",
+        "libz",
+        "libc",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libtriplecam_image_optical_zoom",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libtriplecam_image_optical_zoom.so",
+            ],
+        },
+    },
+    shared_libs: [
+        "libmpbase",
+        "libOpenCL",
+        "liblog",
+        "libc",
+        "libm",
+        "libdl",
+    ],
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libtrustedapploader",
     owner: "oneplus",
     strip: {
