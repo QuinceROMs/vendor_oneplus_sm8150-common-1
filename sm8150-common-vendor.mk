@@ -776,8 +776,10 @@ PRODUCT_PACKAGES += \
     vendor_lib_rfsa_adsp_libproxy_skel_so \
     vendor_lib_rfsa_adsp_libscveObjectSegmentation_skel_so \
     vendor_lib_rfsa_adsp_libscveT2T_skel_so \
+    vendor_lib_rfsa_adsp_libsnpe_dsp_v66_domains_v2_skel_so \
     vendor_lib_rfsa_adsp_libsns_device_mode_skel_so \
     vendor_lib_rfsa_adsp_libsns_low_lat_stream_skel_so \
+    vendor_lib_rfsa_adsp_oemconfig_so \
     vendor.qti.diaghal@1.0 \
     com.qualcomm.qti.dpm.api@1.0 \
     lib-imsvideocodec \

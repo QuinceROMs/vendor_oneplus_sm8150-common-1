@@ -14984,6 +14984,15 @@ prebuilt_rfsa {
 }
 
 prebuilt_rfsa {
+    name: "vendor_lib_rfsa_adsp_libsnpe_dsp_v66_domains_v2_skel_so",
+    filename: "libsnpe_dsp_v66_domains_v2_skel.so",
+    owner: "oneplus",
+    src: "proprietary/vendor/lib/rfsa/adsp/libsnpe_dsp_v66_domains_v2_skel.so",
+    relative_install_path: "adsp",
+    soc_specific: true,
+}
+
+prebuilt_rfsa {
     name: "vendor_lib_rfsa_adsp_libsns_device_mode_skel_so",
     filename: "libsns_device_mode_skel.so",
     owner: "oneplus",
@@ -14997,6 +15006,15 @@ prebuilt_rfsa {
     filename: "libsns_low_lat_stream_skel.so",
     owner: "oneplus",
     src: "proprietary/vendor/lib/rfsa/adsp/libsns_low_lat_stream_skel.so",
+    relative_install_path: "adsp",
+    soc_specific: true,
+}
+
+prebuilt_rfsa {
+    name: "vendor_lib_rfsa_adsp_oemconfig_so",
+    filename: "oemconfig.so",
+    owner: "oneplus",
+    src: "proprietary/vendor/lib/rfsa/adsp/oemconfig.so",
     relative_install_path: "adsp",
     soc_specific: true,
 }
