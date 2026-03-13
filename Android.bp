@@ -8955,6 +8955,18 @@ cc_prebuilt_library_shared {
         none: true,
     },
     target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libcvp_common.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
         android_arm64: {
             srcs: [
                 "proprietary/vendor/lib64/libcvp_common.so",
@@ -8968,7 +8980,235 @@ cc_prebuilt_library_shared {
             ],
         },
     },
-    compile_multilib: "64",
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcvp",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libcvp.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libion",
+                "libcvp_stub",
+                "libcvp_common",
+                "libcdsprpc",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libcvp.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libion",
+                "libcvp_stub",
+                "libcvp_common",
+                "libcdsprpc",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcvp_stub",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libcvp_stub.so",
+            ],
+            shared_libs: [
+                "libcdsprpc",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libcvp_stub.so",
+            ],
+            shared_libs: [
+                "libcdsprpc",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcvpcpuRev_skel",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libcvpcpuRev_skel.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libc++",
+                "libcdsprpc",
+                "libion",
+                "libcvp_common",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libcvpcpuRev_skel.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libc++",
+                "libcdsprpc",
+                "libion",
+                "libcvp_common",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libOmxVpp",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libOmxVpp.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libutils",
+                "libbinder",
+                "libcutils",
+                "libOmxCore",
+                "libvppclient",
+                "vendor.qti.hardware.vpp@1.1",
+                "vendor.qti.hardware.vpp@1.2",
+                "vendor.qti.hardware.capabilityconfigstore@1.0",
+                "libhidlbase",
+                "libhidltransport",
+                "libhwbinder",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libOmxVpp.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libutils",
+                "libbinder",
+                "libcutils",
+                "libOmxCore",
+                "libvppclient",
+                "vendor.qti.hardware.vpp@1.1",
+                "vendor.qti.hardware.vpp@1.2",
+                "vendor.qti.hardware.capabilityconfigstore@1.0",
+                "libhidlbase",
+                "libhidltransport",
+                "libhwbinder",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.qti.hardware.cvp@1.0",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/vendor.qti.hardware.cvp@1.0.so",
+            ],
+            shared_libs: [
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.qti.hardware.cvp@1.0.so",
+            ],
+            shared_libs: [
+                "libhidlbase",
+                "liblog",
+                "libutils",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
     prefer: true,
     soc_specific: true,
 }
