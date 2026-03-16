@@ -61,6 +61,7 @@ socket: arg0 == AF_UNIX
 exit: 1
 readlink: 1
 getpid: 1
+gettid: 1
 sigaltstack: 1
 setpriority: 1
 getdents64: 1
