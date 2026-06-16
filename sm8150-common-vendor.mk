@@ -172,6 +172,7 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8150-common/proprietary/vendor/etc/init/ssgtzd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/ssgtzd.rc \
     vendor/oneplus/sm8150-common/proprietary/vendor/etc/init/vendor.display.color@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.display.color@1.0-service.rc \
     vendor/oneplus/sm8150-common/proprietary/vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.dolby.hardware.dms@2.0-service.rc \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/init/vendor.dolby.media.c2@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.dolby.media.c2@1.0-service.rc \
     vendor/oneplus/sm8150-common/proprietary/vendor/etc/init/vendor.oplus.hardware.cameraMDM@2.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.oplus.hardware.cameraMDM@2.0-service.rc \
     vendor/oneplus/sm8150-common/proprietary/vendor/etc/init/vendor.qti.adsprpc-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.adsprpc-service.rc \
     vendor/oneplus/sm8150-common/proprietary/vendor/etc/init/vendor.qti.cdsprpc-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.cdsprpc-service.rc \
@@ -279,8 +280,13 @@ PRODUCT_PACKAGES += \
     libc2d30_bltlib \
     libcdsp_default_listener \
     libcdsprpc \
+    libcodec2_soft_ac4dec \
+    libcodec2_soft_ddpdec \
+    libcodec2_soft_dolby \
+    libcodec2_store_dolby \
     libconfigdb \
     libdapparamstorage \
+    libdapparamstorage-dolby \
     libdiag \
     libdsi_netctrl \
     libdsutils \
@@ -364,8 +370,6 @@ PRODUCT_PACKAGES += \
     libqtigef \
     libsmwrapper \
     libssrec \
-    libstagefright_soft_ac4dec \
-    libstagefright_soft_ddpdec \
     libwfdcodecv4l2_proprietary \
     libwfdcommonutils_proprietary \
     libwfdconfigutils_proprietary \
@@ -483,6 +487,7 @@ PRODUCT_PACKAGES += \
     libQSEEComAPI \
     libQTEEConnector_vendor \
     libSecureUILib \
+    libstagefright_foundation-dolby \
     libSTDualCamCaptureWT \
     libSonyIMX471RmscLibrary \
     libStDrvInt \
@@ -537,6 +542,8 @@ PRODUCT_PACKAGES += \
     libdisp-aba \
     libdisplayqos \
     libdlbdsservice \
+    libdlbpreg \
+    libdlbvol \
     libdpmqmihal \
     libdpps \
     libdrmfs \
@@ -577,6 +584,7 @@ PRODUCT_PACKAGES += \
     libnetmgr_nr_fusion \
     libnetmgr_rmnet_ext \
     libnlnetmgr \
+    liboem_specific \
     liboemnvbk_img_helper \
     libopcamera_native_modules \
     libops \
@@ -619,6 +627,7 @@ PRODUCT_PACKAGES += \
     libsnsapi \
     libsnsdiaglog \
     libsoc_helper \
+    libspatialaudio \
     libspcom \
     libspl \
     libssc \
@@ -659,6 +668,7 @@ PRODUCT_PACKAGES += \
     vendor.display.color@1.4 \
     vendor.display.color@1.5 \
     vendor.display.postproc@1.0 \
+    vendor.dolby.hardware.dms@2.0-dolby \
     vendor.dolby.hardware.dms@2.0-impl \
     vendor.oplus.hardware.cameraMDM@2.0 \
     vendor.oplus.hardware.cammidasservice@1.0 \
@@ -901,7 +911,8 @@ PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks@1.3-service-qti-hta.xml \
     android.hardware.neuralnetworks@1.3-service-qti.xml \
     manifest_oplus_cameramdm_2.0.xml \
-    manifest_vendor.dolby.hardware.dms.xml \
+    vendor.dolby.hardware.dms@2.0-service.xml \
+    vendor.dolby.media.c2.xml \
     vendor.qti.gnss@4.0-service.xml \
     manifest_android.hardware.drm@1.3-service.widevine.xml \
     manifest_oplusSensor.xml \
@@ -920,6 +931,7 @@ PRODUCT_PACKAGES += \
     qcrild \
     vendor.display.color@1.0-service \
     vendor.dolby.hardware.dms@2.0-service \
+    vendor.dolby.media.c2@1.0-service \
     vendor.oplus.hardware.cameraMDM@2.0-service \
     vendor.qti.hardware.alarm@1.0-service \
     vendor.qti.hardware.capabilityconfigstore@1.0-service \
