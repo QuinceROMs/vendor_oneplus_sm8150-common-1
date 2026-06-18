@@ -3382,6 +3382,37 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libaudiohal@6.0",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/system/lib/libaudiohal@6.0.so",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/system/lib64/libaudiohal@6.0.so",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+    shared_libs: [
+        "android.hardware.audio.common@6.0",
+        "android.hardware.audio.common@6.0-util",
+        "android.hardware.audio.effect@6.0",
+        "android.hardware.audio.effect@6.0-util",
+        "android.hardware.audio@6.0",
+        "android.hardware.audio@6.0-util",
+    ],
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libaudioparsers",
     owner: "oneplus",
     strip: {
