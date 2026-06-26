@@ -9182,6 +9182,120 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libdts-eagle-shared",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libdts-eagle-shared.so"],
+            shared_libs: [
+                "liblog",
+                "libdl",
+                "libm",
+                "libc",
+            ],
+        },
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libdts-eagle-shared.so"],
+            shared_libs: [
+                "liblog",
+                "libdl",
+                "libm",
+                "libc",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libdtsaudio",
+    owner: "oneplus",
+    check_elf_files: false,
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/soundfx/libdtsaudio.so"],
+            shared_libs: [
+                "libcutils",
+                "libutils",
+                "libaudioutils",
+                "liblog",
+                "libdts-eagle-shared",
+                "libsqlite",
+                "libcrypto",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/soundfx/libdtsaudio.so"],
+            shared_libs: [
+                "libclang_rt.ubsan_standalone",
+                "libcutils",
+                "libutils",
+                "libaudioutils",
+                "liblog",
+                "libdts-eagle-shared",
+                "libsqlite",
+                "libcrypto",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    relative_install_path: "soundfx",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libdtsdsec",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["proprietary/vendor/lib/libdtsdsec.so"],
+            shared_libs: [
+                "libcutils",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: ["proprietary/vendor/lib64/libdtsdsec.so"],
+            shared_libs: [
+                "libcutils",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libgdtap",
     owner: "oneplus",
     strip: {
@@ -17572,6 +17686,17 @@ android_app_import {
 }
 
 android_app_import {
+    name: "DtsUltra",
+    owner: "oneplus",
+    apk: "proprietary/system/priv-app/DtsUltra/DtsUltra.apk",
+    certificate: "platform",
+    dex_preopt: {
+        enabled: false,
+    },
+    privileged: true,
+}
+
+android_app_import {
     name: "IWlanService",
     owner: "oneplus",
     apk: "proprietary/vendor/app/IWlanService/IWlanService.apk",
@@ -17781,6 +17906,12 @@ dex_import {
         "proprietary/system_ext/framework/dpmapi.jar",
     ],
     system_ext_specific: true,
+}
+
+dex_import {
+    name: "dtsaudio",
+    owner: "oneplus",
+    jars: ["proprietary/system/framework/dtsaudio.jar"],
 }
 
 dex_import {
