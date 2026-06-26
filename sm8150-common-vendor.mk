@@ -63,7 +63,10 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8150-common/proprietary/odm/lib64/camera/fdconfigvideo.bin:$(TARGET_COPY_OUT_ODM)/lib64/camera/fdconfigvideo.bin \
     vendor/oneplus/sm8150-common/proprietary/odm/lib64/camera/fdconfigvideolite.bin:$(TARGET_COPY_OUT_ODM)/lib64/camera/fdconfigvideolite.bin \
     vendor/oneplus/sm8150-common/proprietary/product/etc/sysconfig/com.android.hotwordenrollment.common.util.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/com.android.hotwordenrollment.common.util.xml \
+    vendor/oneplus/sm8150-common/proprietary/system/etc/default-permissions/default-com.dts.dtsxultra.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/default-permissions/default-com.dts.dtsxultra.xml \
+    vendor/oneplus/sm8150-common/proprietary/system/etc/permissions/dtsaudio.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/dtsaudio.xml \
     vendor/oneplus/sm8150-common/proprietary/system/etc/permissions/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-qti.xml \
+    vendor/oneplus/sm8150-common/proprietary/system/etc/sysconfig/config-com.dts.dtsxultra.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/config-com.dts.dtsxultra.xml \
     vendor/oneplus/sm8150-common/proprietary/system/etc/sysconfig/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml \
     vendor/oneplus/sm8150-common/proprietary/system_ext/etc/dpm/dpm.conf:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/dpm/dpm.conf \
     vendor/oneplus/sm8150-common/proprietary/system_ext/etc/init/dpmd.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/dpmd.rc \
@@ -139,6 +142,68 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8150-common/proprietary/vendor/etc/data/dsi_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/data/dsi_config.xml \
     vendor/oneplus/sm8150-common/proprietary/vendor/etc/data/netmgr_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/data/netmgr_config.xml \
     vendor/oneplus/sm8150-common/proprietary/vendor/etc/default-permissions/com.qualcomm.qti.cne.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default-permissions/com.qualcomm.qti.cne.xml \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/acc/d30de3a0-b177-4822-9c15-816b79545f82_usb_44.bin:$(TARGET_COPY_OUT_VENDOR)/etc/dts/acc/d30de3a0-b177-4822-9c15-816b79545f82_usb_44.bin \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/acc/d30de3a0-b177-4822-9c15-816b79545f82_usb_48.bin:$(TARGET_COPY_OUT_VENDOR)/etc/dts/acc/d30de3a0-b177-4822-9c15-816b79545f82_usb_48.bin \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/acc/f08a4c48-0887-11e4-9191-0800200c9a11_bt_44.bin:$(TARGET_COPY_OUT_VENDOR)/etc/dts/acc/f08a4c48-0887-11e4-9191-0800200c9a11_bt_44.bin \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/acc/f08a4c48-0887-11e4-9191-0800200c9a11_bt_48.bin:$(TARGET_COPY_OUT_VENDOR)/etc/dts/acc/f08a4c48-0887-11e4-9191-0800200c9a11_bt_48.bin \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/acc/f08a4c48-0887-11e4-9191-0800200c9a11_usb_44.bin:$(TARGET_COPY_OUT_VENDOR)/etc/dts/acc/f08a4c48-0887-11e4-9191-0800200c9a11_usb_44.bin \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/acc/f08a4c48-0887-11e4-9191-0800200c9a11_usb_48.bin:$(TARGET_COPY_OUT_VENDOR)/etc/dts/acc/f08a4c48-0887-11e4-9191-0800200c9a11_usb_48.bin \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/acc/f08a4c48-0887-11e4-9191-0800200c9a11_wh_48.bin:$(TARGET_COPY_OUT_VENDOR)/etc/dts/acc/f08a4c48-0887-11e4-9191-0800200c9a11_wh_48.bin \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/acc/f08a4c48-0887-11e4-9191-0800200c9a12_bt_44.bin:$(TARGET_COPY_OUT_VENDOR)/etc/dts/acc/f08a4c48-0887-11e4-9191-0800200c9a12_bt_44.bin \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/acc/f08a4c48-0887-11e4-9191-0800200c9a12_bt_48.bin:$(TARGET_COPY_OUT_VENDOR)/etc/dts/acc/f08a4c48-0887-11e4-9191-0800200c9a12_bt_48.bin \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/acc/f08a4c48-0887-11e4-9191-0800200c9a12_usb_44.bin:$(TARGET_COPY_OUT_VENDOR)/etc/dts/acc/f08a4c48-0887-11e4-9191-0800200c9a12_usb_44.bin \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/acc/f08a4c48-0887-11e4-9191-0800200c9a12_usb_48.bin:$(TARGET_COPY_OUT_VENDOR)/etc/dts/acc/f08a4c48-0887-11e4-9191-0800200c9a12_usb_48.bin \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/acc/f08a4c48-0887-11e4-9191-0800200c9a12_wh_48.bin:$(TARGET_COPY_OUT_VENDOR)/etc/dts/acc/f08a4c48-0887-11e4-9191-0800200c9a12_wh_48.bin \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/acc/f08a4c48-0887-11e4-9191-0800200c9a13_bt_44.bin:$(TARGET_COPY_OUT_VENDOR)/etc/dts/acc/f08a4c48-0887-11e4-9191-0800200c9a13_bt_44.bin \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/acc/f08a4c48-0887-11e4-9191-0800200c9a13_bt_48.bin:$(TARGET_COPY_OUT_VENDOR)/etc/dts/acc/f08a4c48-0887-11e4-9191-0800200c9a13_bt_48.bin \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/acc/f08a4c48-0887-11e4-9191-0800200c9a13_usb_44.bin:$(TARGET_COPY_OUT_VENDOR)/etc/dts/acc/f08a4c48-0887-11e4-9191-0800200c9a13_usb_44.bin \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/acc/f08a4c48-0887-11e4-9191-0800200c9a13_usb_48.bin:$(TARGET_COPY_OUT_VENDOR)/etc/dts/acc/f08a4c48-0887-11e4-9191-0800200c9a13_usb_48.bin \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/acc/f08a4c48-0887-11e4-9191-0800200c9a13_wh_48.bin:$(TARGET_COPY_OUT_VENDOR)/etc/dts/acc/f08a4c48-0887-11e4-9191-0800200c9a13_wh_48.bin \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/acc/f08a4c48-0887-11e4-9191-0800200c9a14_bt_44.bin:$(TARGET_COPY_OUT_VENDOR)/etc/dts/acc/f08a4c48-0887-11e4-9191-0800200c9a14_bt_44.bin \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/acc/f08a4c48-0887-11e4-9191-0800200c9a14_bt_48.bin:$(TARGET_COPY_OUT_VENDOR)/etc/dts/acc/f08a4c48-0887-11e4-9191-0800200c9a14_bt_48.bin \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/acc/f08a4c48-0887-11e4-9191-0800200c9a14_usb_44.bin:$(TARGET_COPY_OUT_VENDOR)/etc/dts/acc/f08a4c48-0887-11e4-9191-0800200c9a14_usb_44.bin \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/acc/f08a4c48-0887-11e4-9191-0800200c9a14_usb_48.bin:$(TARGET_COPY_OUT_VENDOR)/etc/dts/acc/f08a4c48-0887-11e4-9191-0800200c9a14_usb_48.bin \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/acc/f08a4c48-0887-11e4-9191-0800200c9a14_wh_48.bin:$(TARGET_COPY_OUT_VENDOR)/etc/dts/acc/f08a4c48-0887-11e4-9191-0800200c9a14_wh_48.bin \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/acc/f08a4c48-0887-11e4-9191-0800200c9a15_bt_44.bin:$(TARGET_COPY_OUT_VENDOR)/etc/dts/acc/f08a4c48-0887-11e4-9191-0800200c9a15_bt_44.bin \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/acc/f08a4c48-0887-11e4-9191-0800200c9a15_bt_48.bin:$(TARGET_COPY_OUT_VENDOR)/etc/dts/acc/f08a4c48-0887-11e4-9191-0800200c9a15_bt_48.bin \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/acc/f08a4c48-0887-11e4-9191-0800200c9a15_usb_44.bin:$(TARGET_COPY_OUT_VENDOR)/etc/dts/acc/f08a4c48-0887-11e4-9191-0800200c9a15_usb_44.bin \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/acc/f08a4c48-0887-11e4-9191-0800200c9a15_usb_48.bin:$(TARGET_COPY_OUT_VENDOR)/etc/dts/acc/f08a4c48-0887-11e4-9191-0800200c9a15_usb_48.bin \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/acc/f08a4c48-0887-11e4-9191-0800200c9a15_wh_48.bin:$(TARGET_COPY_OUT_VENDOR)/etc/dts/acc/f08a4c48-0887-11e4-9191-0800200c9a15_wh_48.bin \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/beq48:$(TARGET_COPY_OUT_VENDOR)/etc/dts/beq48 \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/ctc:$(TARGET_COPY_OUT_VENDOR)/etc/dts/ctc \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/current_bluetooth44k:$(TARGET_COPY_OUT_VENDOR)/etc/dts/current_bluetooth44k \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/current_bluetooth48k:$(TARGET_COPY_OUT_VENDOR)/etc/dts/current_bluetooth48k \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/current_lineout48k:$(TARGET_COPY_OUT_VENDOR)/etc/dts/current_lineout48k \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/current_speaker48k:$(TARGET_COPY_OUT_VENDOR)/etc/dts/current_speaker48k \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/current_usb44k:$(TARGET_COPY_OUT_VENDOR)/etc/dts/current_usb44k \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/current_usb48k:$(TARGET_COPY_OUT_VENDOR)/etc/dts/current_usb48k \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/custom_accessory44:$(TARGET_COPY_OUT_VENDOR)/etc/dts/custom_accessory44 \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/custom_accessory48:$(TARGET_COPY_OUT_VENDOR)/etc/dts/custom_accessory48 \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/customer.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/dts/customer.cfg \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/custom_speaker48:$(TARGET_COPY_OUT_VENDOR)/etc/dts/custom_speaker48 \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/default_accessory44:$(TARGET_COPY_OUT_VENDOR)/etc/dts/default_accessory44 \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/default_accessory48:$(TARGET_COPY_OUT_VENDOR)/etc/dts/default_accessory48 \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/default_speaker48:$(TARGET_COPY_OUT_VENDOR)/etc/dts/default_speaker48 \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/game1_accessory44:$(TARGET_COPY_OUT_VENDOR)/etc/dts/game1_accessory44 \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/game1_accessory48:$(TARGET_COPY_OUT_VENDOR)/etc/dts/game1_accessory48 \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/game1_speaker48:$(TARGET_COPY_OUT_VENDOR)/etc/dts/game1_speaker48 \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/game2_accessory44:$(TARGET_COPY_OUT_VENDOR)/etc/dts/game2_accessory44 \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/game2_accessory48:$(TARGET_COPY_OUT_VENDOR)/etc/dts/game2_accessory48 \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/game2_speaker48:$(TARGET_COPY_OUT_VENDOR)/etc/dts/game2_speaker48 \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/game3_accessory44:$(TARGET_COPY_OUT_VENDOR)/etc/dts/game3_accessory44 \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/game3_accessory48:$(TARGET_COPY_OUT_VENDOR)/etc/dts/game3_accessory48 \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/game3_speaker48:$(TARGET_COPY_OUT_VENDOR)/etc/dts/game3_speaker48 \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/movie_accessory44:$(TARGET_COPY_OUT_VENDOR)/etc/dts/movie_accessory44 \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/movie_accessory48:$(TARGET_COPY_OUT_VENDOR)/etc/dts/movie_accessory48 \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/movie_speaker48:$(TARGET_COPY_OUT_VENDOR)/etc/dts/movie_speaker48 \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/music_accessory44:$(TARGET_COPY_OUT_VENDOR)/etc/dts/music_accessory44 \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/music_accessory48:$(TARGET_COPY_OUT_VENDOR)/etc/dts/music_accessory48 \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/music_speaker48:$(TARGET_COPY_OUT_VENDOR)/etc/dts/music_speaker48 \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/offline_hptuning.db:$(TARGET_COPY_OUT_VENDOR)/etc/dts/offline_hptuning.db \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/off_speaker48:$(TARGET_COPY_OUT_VENDOR)/etc/dts/off_speaker48 \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/voice_accessory44:$(TARGET_COPY_OUT_VENDOR)/etc/dts/voice_accessory44 \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/voice_accessory48:$(TARGET_COPY_OUT_VENDOR)/etc/dts/voice_accessory48 \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/voice_speaker48:$(TARGET_COPY_OUT_VENDOR)/etc/dts/voice_speaker48 \
     vendor/oneplus/sm8150-common/proprietary/vendor/etc/flp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/flp.conf \
     vendor/oneplus/sm8150-common/proprietary/vendor/etc/gnss_antenna_info.conf:$(TARGET_COPY_OUT_VENDOR)/etc/gnss_antenna_info.conf \
     vendor/oneplus/sm8150-common/proprietary/vendor/etc/gpfspath_oem_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gpfspath_oem_config.xml \
@@ -155,6 +220,7 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8150-common/proprietary/vendor/etc/init/dataadpl.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dataadpl.rc \
     vendor/oneplus/sm8150-common/proprietary/vendor/etc/init/dataqti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dataqti.rc \
     vendor/oneplus/sm8150-common/proprietary/vendor/etc/init/dpmQmiMgr.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dpmQmiMgr.rc \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/init/dtsaudio.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dtsaudio.rc \
     vendor/oneplus/sm8150-common/proprietary/vendor/etc/init/ims_rtp_daemon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/ims_rtp_daemon.rc \
     vendor/oneplus/sm8150-common/proprietary/vendor/etc/init/imsdatadaemon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/imsdatadaemon.rc \
     vendor/oneplus/sm8150-common/proprietary/vendor/etc/init/imsqmidaemon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/imsqmidaemon.rc \
@@ -548,6 +614,9 @@ PRODUCT_PACKAGES += \
     libdpps \
     libdrmfs \
     libdrmtime \
+    libdts-eagle-shared \
+    libdtsaudio \
+    libdtsdsec \
     libgdtap \
     libgeofencing \
     libgnss \
@@ -882,6 +951,8 @@ PRODUCT_PACKAGES += \
     odm_lib_rfsa_adsp_libktvpitchshift_so \
     odm_lib_rfsa_adsp_libktvreverb_so \
     odm_lib_rfsa_adsp_libktvvolume_so \
+    DtsUltra \
+    dtsaudio \
     CACertService \
     CneApp \
     IWlanService \
