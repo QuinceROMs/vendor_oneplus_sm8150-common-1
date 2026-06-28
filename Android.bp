@@ -15874,6 +15874,8 @@ cc_prebuilt_library_shared {
                 "libwfddisplayconfig",
                 "libmedia_helper",
                 "libaudioclient",
+                "libaudiobase",
+                "libwfd_shim",
                 "libwfdavenhancements",
                 "libhidlbase",
                 "libgralloctypes",

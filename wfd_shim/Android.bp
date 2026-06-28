@@ -1,0 +1,15 @@
+//
+// Copyright (C) 2026 The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+cc_library_shared {
+    name: "libwfd_shim",
+    srcs: ["createvirtualdisplay_shim.cpp"],
+    shared_libs: [
+        "libbinder",
+        "libgui",
+        "libutils",
+    ],
+    system_ext_specific: true,
+}
