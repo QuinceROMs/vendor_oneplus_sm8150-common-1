@@ -15991,6 +15991,7 @@ cc_prebuilt_library_shared {
                 "libmedia_helper",
                 "libaudioclient",
                 "libaudiofoundation",
+                "libaudiobase",
                 "audioclient-types-aidl-cpp",
                 "android.media.audio.common.types-V5-cpp",
                 "libwfdmmsrc_system",
