@@ -63,10 +63,11 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8150-common/proprietary/odm/lib64/camera/fdconfigvideo.bin:$(TARGET_COPY_OUT_ODM)/lib64/camera/fdconfigvideo.bin \
     vendor/oneplus/sm8150-common/proprietary/odm/lib64/camera/fdconfigvideolite.bin:$(TARGET_COPY_OUT_ODM)/lib64/camera/fdconfigvideolite.bin \
     vendor/oneplus/sm8150-common/proprietary/product/etc/sysconfig/com.android.hotwordenrollment.common.util.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/com.android.hotwordenrollment.common.util.xml \
-    vendor/oneplus/sm8150-common/proprietary/system/etc/default-permissions/default-com.dts.dtsxultra.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/default-permissions/default-com.dts.dtsxultra.xml \
+    vendor/oneplus/sm8150-common/proprietary/system/etc/default-permissions/default-com.shadov.dtsx.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/default-permissions/default-com.shadov.dtsx.xml \
     vendor/oneplus/sm8150-common/proprietary/system/etc/permissions/dtsaudio.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/dtsaudio.xml \
+    vendor/oneplus/sm8150-common/proprietary/system/etc/permissions/privapp-permissions-dtsxultra.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-dtsxultra.xml \
     vendor/oneplus/sm8150-common/proprietary/system/etc/permissions/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-qti.xml \
-    vendor/oneplus/sm8150-common/proprietary/system/etc/sysconfig/config-com.dts.dtsxultra.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/config-com.dts.dtsxultra.xml \
+    vendor/oneplus/sm8150-common/proprietary/system/etc/sysconfig/config-com.shadov.dtsx.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/config-com.shadov.dtsx.xml \
     vendor/oneplus/sm8150-common/proprietary/system/etc/sysconfig/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml \
     vendor/oneplus/sm8150-common/proprietary/system_ext/etc/dpm/dpm.conf:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/dpm/dpm.conf \
     vendor/oneplus/sm8150-common/proprietary/system_ext/etc/init/dpmd.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/dpmd.rc \
@@ -951,7 +952,7 @@ PRODUCT_PACKAGES += \
     odm_lib_rfsa_adsp_libktvpitchshift_so \
     odm_lib_rfsa_adsp_libktvreverb_so \
     odm_lib_rfsa_adsp_libktvvolume_so \
-    DtsUltra \
+    DTSXULTRA \
     dtsaudio \
     CACertService \
     CneApp \

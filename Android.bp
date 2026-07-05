@@ -17689,10 +17689,10 @@ android_app_import {
 }
 
 android_app_import {
-    name: "DtsUltra",
-    owner: "oneplus",
-    apk: "proprietary/system/priv-app/DtsUltra/DtsUltra.apk",
-    certificate: "platform",
+    name: "DTSXULTRA",
+    apk: "proprietary/system/priv-app/DTSXULTRA/DTSXULTRA.apk",
+    preprocessed: true,
+    skip_preprocessed_apk_checks: true,
     dex_preopt: {
         enabled: false,
     },
