@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<permissions>
+    <privapp-permissions package="com.shadov.dtsx">
+        <permission name="android.permission.MODIFY_AUDIO_SETTINGS_PRIVILEGED"/>
+        <permission name="android.permission.RECORD_AUDIO"/>
+    </privapp-permissions>
+</permissions>
