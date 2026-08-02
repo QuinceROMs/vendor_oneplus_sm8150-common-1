@@ -18501,38 +18501,6 @@ cc_prebuilt_binary {
 
 
 cc_prebuilt_binary {
-    name: "vendor.oplus.hardware.cameraMDM@2.0-service",
-    owner: "oneplus",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/hw/vendor.oplus.hardware.cameraMDM@2.0-service",
-            ],
-            shared_libs: [
-                "vendor.oplus.hardware.cameraMDM@2.0",
-                "libbinder",
-                "liblog",
-                "libutils",
-                "libhidlbase",
-                "libhidltransport",
-                "libQSEEComAPI",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    relative_install_path: "hw",
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
     name: "vendor.qti.hardware.alarm@1.0-service",
     owner: "oneplus",
     target: {
