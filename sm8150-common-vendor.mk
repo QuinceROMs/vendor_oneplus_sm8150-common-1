@@ -62,7 +62,13 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8150-common/proprietary/odm/lib64/camera/fdconfigpreviewlite.bin:$(TARGET_COPY_OUT_ODM)/lib64/camera/fdconfigpreviewlite.bin \
     vendor/oneplus/sm8150-common/proprietary/odm/lib64/camera/fdconfigvideo.bin:$(TARGET_COPY_OUT_ODM)/lib64/camera/fdconfigvideo.bin \
     vendor/oneplus/sm8150-common/proprietary/odm/lib64/camera/fdconfigvideolite.bin:$(TARGET_COPY_OUT_ODM)/lib64/camera/fdconfigvideolite.bin \
+    vendor/oneplus/sm8150-common/proprietary/product/etc/default-permissions/com.oneplus.camera.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/default-permissions/com.oneplus.camera.xml \
+    vendor/oneplus/sm8150-common/proprietary/product/etc/permissions/com.oneplus.camera.service.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.oneplus.camera.service.xml \
+    vendor/oneplus/sm8150-common/proprietary/product/etc/permissions/com.oneplus.camera.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.oneplus.camera.xml \
+    vendor/oneplus/sm8150-common/proprietary/product/etc/permissions/com.oneplus.gallery.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.oneplus.gallery.xml \
+    vendor/oneplus/sm8150-common/proprietary/product/etc/permissions/oplus_google_lens_config.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/oplus_google_lens_config.xml \
     vendor/oneplus/sm8150-common/proprietary/product/etc/sysconfig/com.android.hotwordenrollment.common.util.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/com.android.hotwordenrollment.common.util.xml \
+    vendor/oneplus/sm8150-common/proprietary/product/etc/sysconfig/oneplus-hiddenapi.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/oneplus-hiddenapi.xml \
     vendor/oneplus/sm8150-common/proprietary/system/etc/default-permissions/default-com.shadov.dtsx.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/default-permissions/default-com.shadov.dtsx.xml \
     vendor/oneplus/sm8150-common/proprietary/system/etc/permissions/dtsaudio.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/dtsaudio.xml \
     vendor/oneplus/sm8150-common/proprietary/system/etc/permissions/privapp-permissions-dtsxultra.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-dtsxultra.xml \
@@ -180,8 +186,8 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/current_usb48k:$(TARGET_COPY_OUT_VENDOR)/etc/dts/current_usb48k \
     vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/custom_accessory44:$(TARGET_COPY_OUT_VENDOR)/etc/dts/custom_accessory44 \
     vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/custom_accessory48:$(TARGET_COPY_OUT_VENDOR)/etc/dts/custom_accessory48 \
-    vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/customer.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/dts/customer.cfg \
     vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/custom_speaker48:$(TARGET_COPY_OUT_VENDOR)/etc/dts/custom_speaker48 \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/customer.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/dts/customer.cfg \
     vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/default_accessory44:$(TARGET_COPY_OUT_VENDOR)/etc/dts/default_accessory44 \
     vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/default_accessory48:$(TARGET_COPY_OUT_VENDOR)/etc/dts/default_accessory48 \
     vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/default_speaker48:$(TARGET_COPY_OUT_VENDOR)/etc/dts/default_speaker48 \
@@ -200,8 +206,8 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/music_accessory44:$(TARGET_COPY_OUT_VENDOR)/etc/dts/music_accessory44 \
     vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/music_accessory48:$(TARGET_COPY_OUT_VENDOR)/etc/dts/music_accessory48 \
     vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/music_speaker48:$(TARGET_COPY_OUT_VENDOR)/etc/dts/music_speaker48 \
-    vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/offline_hptuning.db:$(TARGET_COPY_OUT_VENDOR)/etc/dts/offline_hptuning.db \
     vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/off_speaker48:$(TARGET_COPY_OUT_VENDOR)/etc/dts/off_speaker48 \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/offline_hptuning.db:$(TARGET_COPY_OUT_VENDOR)/etc/dts/offline_hptuning.db \
     vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/voice_accessory44:$(TARGET_COPY_OUT_VENDOR)/etc/dts/voice_accessory44 \
     vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/voice_accessory48:$(TARGET_COPY_OUT_VENDOR)/etc/dts/voice_accessory48 \
     vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/voice_speaker48:$(TARGET_COPY_OUT_VENDOR)/etc/dts/voice_speaker48 \
@@ -318,15 +324,10 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8150-common/proprietary/vendor/radio/qcril_database/upgrade/4_version_update_ecc_table.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/4_version_update_ecc_table.sql \
     vendor/oneplus/sm8150-common/proprietary/vendor/radio/qcril_database/upgrade/5_version_update_ecc_table.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/5_version_update_ecc_table.sql \
     vendor/oneplus/sm8150-common/proprietary/vendor/radio/qcril_database/upgrade/6_version_update_ecc_table.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/6_version_update_ecc_table.sql \
-    vendor/oneplus/sm8150-common/proprietary/vendor/radio/qcril_database/upgrade/7_version_update_ecc_table.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/7_version_update_ecc_table.sql \
-    vendor/oneplus/sm8150-common/proprietary/product/etc/default-permissions/com.oneplus.camera.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/default-permissions/com.oneplus.camera.xml \
-    vendor/oneplus/sm8150-common/proprietary/product/etc/permissions/com.oneplus.camera.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.oneplus.camera.xml \
-    vendor/oneplus/sm8150-common/proprietary/product/etc/permissions/com.oneplus.camera.service.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.oneplus.camera.service.xml \
-    vendor/oneplus/sm8150-common/proprietary/product/etc/permissions/com.oneplus.gallery.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.oneplus.gallery.xml \
-    vendor/oneplus/sm8150-common/proprietary/product/etc/permissions/oplus_google_lens_config.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/oplus_google_lens_config.xml \
-    vendor/oneplus/sm8150-common/proprietary/product/etc/sysconfig/oneplus-hiddenapi.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/oneplus-hiddenapi.xml
+    vendor/oneplus/sm8150-common/proprietary/vendor/radio/qcril_database/upgrade/7_version_update_ecc_table.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/7_version_update_ecc_table.sql
 
 PRODUCT_PACKAGES += \
+    vendor.oplus.hardware.cammidasservice@1.0_system \
     eglSubDriverAndroid \
     libEGL_adreno \
     libGLESv1_CM_adreno \
@@ -338,24 +339,34 @@ PRODUCT_PACKAGES += \
     vulkan.adreno \
     libC2D2 \
     libCB \
+    libOmxVpp \
     libOpenCL \
     libOpenCL_adreno \
+    libSTDualCamCaptureWT \
+    libSuperSensor \
+    libSuperSensorFallback \
+    libSuperSensorProcessor \
+    libSuperSensorProcessorCWrapper \
     libVkLayer_q3dtools \
+    lib_oneplus_watermark \
     libadreno_utils \
     libadsprpc \
     libc2d30_bltlib \
     libcdsp_default_listener \
     libcdsprpc \
-    libcodec2_soft_ac4dec \
-    libcodec2_soft_ddpdec \
-    libcodec2_soft_dolby \
-    libcodec2_store_dolby \
     libconfigdb \
-    libdapparamstorage \
+    libcvp \
+    libcvp_common \
+    libcvp_stub \
+    libcvpcpuRev_skel \
     libdapparamstorage-dolby \
+    libdapparamstorage \
     libdiag \
+    libdlbpreg \
     libdsi_netctrl \
     libdsutils \
+    libdts-eagle-shared \
+    libdtsdsec \
     libfastcvdsp_stub \
     libfastcvopt \
     libgpudataproducer \
@@ -389,13 +400,22 @@ PRODUCT_PACKAGES += \
     libscveObjectTracker \
     libscveObjectTracker_stub \
     libsdsprpc \
+    libstagefright_foundation-dolby \
     libsysmon_cdsp_skel \
     libthermalclient \
     libvppclient \
     libvpphcp \
     libvpphvx \
+    libvppimmotion \
     libvpplibrary \
     libxml \
+    libdlbvol \
+    libdtsaudio \
+    libspatialaudio \
+    libswdap \
+    libswgamedap \
+    libswvqe \
+    vendor.dolby.hardware.dms@2.0-dolby \
     vendor.dolby.hardware.dms@2.0 \
     vendor.qti.hardware.cvp@1.0 \
     vendor.qti.hardware.dsp@1.0 \
@@ -420,7 +440,6 @@ PRODUCT_PACKAGES += \
     libbluetooth_audio_session_qti_2_1 \
     libcapiv2svacnn \
     libcapiv2vop \
-    libdeccfg \
     libfastcrc \
     libgcs-calwrapper \
     libgcs-ipc \
@@ -457,10 +476,10 @@ PRODUCT_PACKAGES += \
     libwfduibcsrcinterface_proprietary \
     libwfdutils_proprietary \
     libasphere \
+    libqcbassboost \
+    libqcreverb \
+    libqcvirt \
     libshoebox \
-    libswdap \
-    libswgamedap \
-    libswvqe \
     vendor.qti.hardware.audiohalext@1.0 \
     vendor.qti.hardware.wifidisplaysession@1.0_vendor \
     vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl \
@@ -549,20 +568,12 @@ PRODUCT_PACKAGES += \
     libGPTEE_vendor \
     libGPreqcancel \
     libGPreqcancel_svc \
-    libOmxVpp \
     libQSEEComAPI \
     libQTEEConnector_vendor \
     libSecureUILib \
-    libstagefright_foundation-dolby \
-    libSTDualCamCaptureWT \
     libSonyIMX471RmscLibrary \
     libStDrvInt \
-    libSuperSensor \
-    libSuperSensorFallback \
-    libSuperSensorProcessor \
-    libSuperSensorProcessorCWrapper \
     lib_bokehlib \
-    lib_oneplus_watermark \
     libadsp_default_listener \
     libaoa \
     libarcsoft_beautyshot \
@@ -597,26 +608,22 @@ PRODUCT_PACKAGES += \
     libcneapiclient \
     libcneoplookup \
     libcneqmiutils \
+    libcodec2_soft_ac4dec \
+    libcodec2_soft_ddpdec \
+    libcodec2_soft_dolby \
+    libcodec2_store_dolby \
     libcom.qti.chinodeutils \
     libcpion \
     libcvface_api \
-    libcvp \
-    libcvp_common \
-    libcvp_stub \
-    libcvpcpuRev_skel \
     libdataitems \
+    libdeccfg \
     libdisp-aba \
     libdisplayqos \
     libdlbdsservice \
-    libdlbpreg \
-    libdlbvol \
     libdpmqmihal \
     libdpps \
     libdrmfs \
     libdrmtime \
-    libdts-eagle-shared \
-    libdtsaudio \
-    libdtsdsec \
     libgdtap \
     libgeofencing \
     libgnss \
@@ -679,6 +686,7 @@ PRODUCT_PACKAGES += \
     librilqmiservices \
     librpmb \
     libsdedrm \
+    libsdk_sr \
     libsdm-color \
     libsdm-colormgr-algo \
     libsdm-diag \
@@ -689,21 +697,19 @@ PRODUCT_PACKAGES += \
     libsensorcal \
     libsensorslog \
     libsettings \
-    libsdk_sr \
     libsns_device_mode_stub \
     libsns_fastRPC_util \
     libsns_low_lat_stream_stub \
     libsnsapi \
     libsnsdiaglog \
     libsoc_helper \
-    libspatialaudio \
     libspcom \
     libspl \
     libssc \
     libssc_default_listener \
     libssd \
-    libstblur_capture_api \
     libst_relighting \
+    libstblur_capture_api \
     libswregistrationalgo \
     libsystem_health_mon \
     libtime_genoff \
@@ -713,7 +719,6 @@ PRODUCT_PACKAGES += \
     libtriplecam_video_optical_zoom \
     libtrustedapploader \
     libvidhance \
-    libvppimmotion \
     libwms \
     libwqe \
     libxtadapter \
@@ -723,9 +728,6 @@ PRODUCT_PACKAGES += \
     qtibus \
     qtimutex \
     sensors.ssc \
-    libqcbassboost \
-    libqcreverb \
-    libqcvirt \
     unnhal-acc-adreno \
     unnhal-acc-common \
     unnhal-acc-hta \
@@ -737,42 +739,8 @@ PRODUCT_PACKAGES += \
     vendor.display.color@1.4 \
     vendor.display.color@1.5 \
     vendor.display.postproc@1.0 \
-    vendor.dolby.hardware.dms@2.0-dolby \
     vendor.dolby.hardware.dms@2.0-impl \
-    vendor.oplus.hardware.cameraMDM@2.0 \
     vendor.oplus.hardware.cammidasservice@1.0 \
-    vendor.oplus.hardware.cammidasservice@1.0_system \
-    prebuilt_libAncFilter_jni \
-    prebuilt_libAncHumanDoubleExposure-jni \
-    prebuilt_libAncHumanRetain-jni_v2 \
-    prebuilt_libAncHumanSegFigureFusion-jni \
-    prebuilt_libAncHumanVideo-jni \
-    prebuilt_libAncHumBokeh-jni \
-    prebuilt_libAPSClient-cmd-jni \
-    prebuilt_libAPSClient-jni \
-    prebuilt_libApsFaceBeautyPreviewProductJni \
-    prebuilt_libextendfile \
-    prebuilt_libFileExtender-jni \
-    prebuilt_libjnisingleblur_api \
-    prebuilt_libjnistblur_api \
-    prebuilt_libmpbase \
-    prebuilt_libOplusBlurPreviewJNI \
-    prebuilt_liboplusCode \
-    prebuilt_libsingle_camera_bokeh_native \
-    prebuilt_libSuperTextWrapper \
-    prebuilt_libXDocProcessSDK-jni \
-    prebuilt_libXDocProcessSDK \
-    prebuilt_libYTCommon \
-    prebuilt_EngCameraClient_sysext \
-    prebuilt_libjnistblur_api.qti_sysext \
-    prebuilt_vendor.oplus.hardware.cameraMDM@1.0_sysext \
-    prebuilt_vendor.oplus.hardware.cameraMDM@2.0_sysext \
-    prebuilt_vendor.oplus.hardware.engcamera@1.0_sysext \
-    prebuilt_libOplusSloganClient_sysext \
-    prebuilt_libSloganJni.oplus_sysext \
-    prebuilt_vendor.oplus.hardware.camera.slogan@1.0_sysext \
-    prebuilt_libsnpe_dsp_v66_domains_v2_skel \
-    prebuilt_libCameraMDMHelper@2.0 \
     vendor.qti.data.factory@2.0 \
     vendor.qti.data.factory@2.1 \
     vendor.qti.data.mwqem@1.0 \
@@ -865,12 +833,40 @@ PRODUCT_PACKAGES += \
     vendor_lib_rfsa_adsp_libsns_device_mode_skel_so \
     vendor_lib_rfsa_adsp_libsns_low_lat_stream_skel_so \
     vendor_lib_rfsa_adsp_oemconfig_so \
+    prebuilt_libAPSClient-cmd-jni \
+    prebuilt_libAPSClient-jni \
+    prebuilt_libAncFilter_jni \
+    prebuilt_libAncHumBokeh-jni \
+    prebuilt_libAncHumanDoubleExposure-jni \
+    prebuilt_libAncHumanRetain-jni_v2 \
+    prebuilt_libAncHumanSegFigureFusion-jni \
+    prebuilt_libAncHumanVideo-jni \
+    prebuilt_libApsFaceBeautyPreviewProductJni \
+    prebuilt_libFileExtender-jni \
+    prebuilt_libOplusBlurPreviewJNI \
+    prebuilt_libSuperTextWrapper \
+    prebuilt_libXDocProcessSDK-jni \
+    prebuilt_libXDocProcessSDK \
+    prebuilt_libYTCommon \
+    prebuilt_libextendfile \
+    prebuilt_libjnisingleblur_api \
+    prebuilt_libjnistblur_api \
+    prebuilt_libmpbase \
+    prebuilt_liboplusCode \
+    prebuilt_libsingle_camera_bokeh_native \
+    prebuilt_EngCameraClient_sysext \
+    prebuilt_libjnistblur_api.qti_sysext \
+    prebuilt_vendor.oplus.hardware.cameraMDM@1.0_sysext \
+    prebuilt_vendor.oplus.hardware.cameraMDM@2.0_sysext \
+    prebuilt_vendor.oplus.hardware.engcamera@1.0_sysext \
     vendor.qti.diaghal@1.0 \
     com.qualcomm.qti.dpm.api@1.0 \
     lib-imsvideocodec \
     lib-imsvt \
     lib-imsvtextutils \
     lib-imsvtutils \
+    prebuilt_libOplusSloganClient_sysext \
+    prebuilt_libSloganJni.oplus_sysext \
     libdiag_system \
     libdpmctmgr \
     libdpmfdmgr \
@@ -899,6 +895,7 @@ PRODUCT_PACKAGES += \
     libwfduibcsinkinterface \
     libwfduibcsrc \
     libwfduibcsrcinterface \
+    prebuilt_vendor.oplus.hardware.camera.slogan@1.0_sysext \
     vendor.qti.hardware.dpmservice@1.0 \
     vendor.qti.hardware.wifidisplaysession@1.0 \
     vendor.qti.hardware.wifidisplaysession_aidl-V1-ndk \
@@ -952,7 +949,6 @@ PRODUCT_PACKAGES += \
     odm_lib_rfsa_adsp_libktvreverb_so \
     odm_lib_rfsa_adsp_libktvvolume_so \
     DTSXULTRA \
-    dtsaudio \
     CACertService \
     CneApp \
     IWlanService \
@@ -960,6 +956,8 @@ PRODUCT_PACKAGES += \
     PowerOffAlarm \
     HotwordEnrollmentOKGoogleWCD9340 \
     HotwordEnrollmentXGoogleWCD9340 \
+    OnePlusCameraService \
+    OnePlusGallery \
     ImsRcsService \
     QtiTelephony \
     QtiTelephonyService \
@@ -968,6 +966,7 @@ PRODUCT_PACKAGES += \
     ims \
     qcrilmsgtunnel \
     WfdCommon \
+    dtsaudio \
     com.android.hotwordenrollment.common.util \
     com.qti.dpmframework \
     dpmapi \
@@ -1003,7 +1002,6 @@ PRODUCT_PACKAGES += \
     vendor.display.color@1.0-service \
     vendor.dolby.hardware.dms@2.0-service \
     vendor.dolby.media.c2@1.0-service \
-    vendor.oplus.hardware.cameraMDM@2.0-service \
     vendor.qti.hardware.alarm@1.0-service \
     vendor.qti.hardware.capabilityconfigstore@1.0-service \
     vendor.qti.hardware.qseecom@1.0-service \
@@ -1075,3 +1073,9 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
+
+PRODUCT_PACKAGES += \
+    OnePlusCamera \
+    libaudiohal@6.0 \
+    prebuilt_libCameraMDMHelper@2.0 \
+    prebuilt_libsnpe_dsp_v66_domains_v2_skel
