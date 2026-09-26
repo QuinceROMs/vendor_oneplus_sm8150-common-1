@@ -345,6 +345,7 @@ PRODUCT_PACKAGES += \
     libcvp_common \
     libdapparamstorage-dolby \
     libdapparamstorage \
+    libdapparamstorage-spatial \
     libdiag \
     libdlbpreg \
     libdsi_netctrl \
@@ -385,6 +386,7 @@ PRODUCT_PACKAGES += \
     libscveObjectTracker_stub \
     libsdsprpc \
     libstagefright_foundation-dolby \
+    libstagefright_foundation-spatial \
     libsysmon_cdsp_skel \
     libthermalclient \
     libvppclient \
@@ -394,12 +396,14 @@ PRODUCT_PACKAGES += \
     libxml \
     libdlbvol \
     libdtsaudio \
-    libspatialaudio \
+    libspatializerparamstorage \
     libswdap \
     libswgamedap \
+    libswspatializer \
     libswvqe \
     vendor.dolby.hardware.dms@2.0-dolby \
     vendor.dolby.hardware.dms@2.0 \
+    vendor.dolby.hardware.dms@2.0-spatial \
     vendor.qti.hardware.dsp@1.0 \
     vendor.qti.hardware.vpp@1.1 \
     vendor.qti.hardware.vpp@1.2 \
