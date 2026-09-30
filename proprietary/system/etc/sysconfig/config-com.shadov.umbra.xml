@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Being a priv-app does not grant hidden-API access. Without this, AudioEffect.setParameter
+     and getParameter are @hide and silently denied on Android 13+ (api=blocked,test-api). -->
+<config>
+    <hidden-api-whitelisted-app package="com.shadov.umbra"/>
+    <allow-in-power-save package="com.shadov.umbra"/>
+    <initial-package-state package="com.shadov.umbra" stopped="false"/>
+</config>
