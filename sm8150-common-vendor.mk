@@ -418,6 +418,7 @@ PRODUCT_PACKAGES += \
     libswgamedap \
     libswspatializer \
     libswvqe \
+    libumbra \
     vendor.dolby.hardware.dms@2.0-dolby \
     vendor.dolby.hardware.dms@2.0 \
     vendor.dolby.hardware.dms@2.0-spatial \
@@ -953,6 +954,7 @@ PRODUCT_PACKAGES += \
     odm_lib_rfsa_adsp_libktvreverb_so \
     odm_lib_rfsa_adsp_libktvvolume_so \
     DTSXULTRA \
+    UmbraControl \
     CACertService \
     CneApp \
     IWlanService \

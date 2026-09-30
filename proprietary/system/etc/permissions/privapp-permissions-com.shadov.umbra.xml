@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Both are signature|privileged, so without this file a ROM that enforces priv-app
+     permissions denies them. MODIFY_AUDIO_ROUTING gets real session ids for per-app control;
+     DUMP is read only by the diagnostics report. Denied, each degrades quietly. -->
+<permissions>
+    <privapp-permissions package="com.shadov.umbra">
+        <permission name="android.permission.MODIFY_AUDIO_ROUTING"/>
+        <permission name="android.permission.DUMP"/>
+    </privapp-permissions>
+</permissions>

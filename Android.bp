@@ -4010,6 +4010,42 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libumbra",
+    owner: "oneplus",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/soundfx/libumbra.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/soundfx/libumbra.so",
+            ],
+            shared_libs: [
+                "liblog",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "both",
+    relative_install_path: "soundfx",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "vendor.dolby.hardware.dms@2.0-dolby",
     owner: "oneplus",
     strip: {
@@ -19225,6 +19261,37 @@ android_app_import {
     },
     privileged: true,
     skip_preprocessed_apk_checks: true,
+}
+
+android_app_import {
+    name: "UmbraControl",
+    owner: "oneplus",
+    apk: "proprietary/system/priv-app/UmbraControl/UmbraControl.apk",
+    preprocessed: true,
+    presigned: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    privileged: true,
+    skip_preprocessed_apk_checks: true,
+    required: [
+        "config-com.shadov.umbra.xml",
+        "privapp-permissions-com.shadov.umbra.xml",
+    ],
+}
+
+prebuilt_etc {
+    name: "privapp-permissions-com.shadov.umbra.xml",
+    owner: "oneplus",
+    src: "proprietary/system/etc/permissions/privapp-permissions-com.shadov.umbra.xml",
+    sub_dir: "permissions",
+}
+
+prebuilt_etc {
+    name: "config-com.shadov.umbra.xml",
+    owner: "oneplus",
+    src: "proprietary/system/etc/sysconfig/config-com.shadov.umbra.xml",
+    sub_dir: "sysconfig",
 }
 
 android_app_import {
