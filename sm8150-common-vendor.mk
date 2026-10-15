@@ -213,6 +213,16 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/voice_accessory44:$(TARGET_COPY_OUT_VENDOR)/etc/dts/voice_accessory44 \
     vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/voice_accessory48:$(TARGET_COPY_OUT_VENDOR)/etc/dts/voice_accessory48 \
     vendor/oneplus/sm8150-common/proprietary/vendor/etc/dts/voice_speaker48:$(TARGET_COPY_OUT_VENDOR)/etc/dts/voice_speaker48 \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/faceunlock/faceapp.b00:$(TARGET_COPY_OUT_VENDOR)/etc/faceunlock/faceapp.b00 \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/faceunlock/faceapp.b01:$(TARGET_COPY_OUT_VENDOR)/etc/faceunlock/faceapp.b01 \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/faceunlock/faceapp.b02:$(TARGET_COPY_OUT_VENDOR)/etc/faceunlock/faceapp.b02 \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/faceunlock/faceapp.b03:$(TARGET_COPY_OUT_VENDOR)/etc/faceunlock/faceapp.b03 \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/faceunlock/faceapp.b04:$(TARGET_COPY_OUT_VENDOR)/etc/faceunlock/faceapp.b04 \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/faceunlock/faceapp.b05:$(TARGET_COPY_OUT_VENDOR)/etc/faceunlock/faceapp.b05 \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/faceunlock/faceapp.b06:$(TARGET_COPY_OUT_VENDOR)/etc/faceunlock/faceapp.b06 \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/faceunlock/faceapp.b07:$(TARGET_COPY_OUT_VENDOR)/etc/faceunlock/faceapp.b07 \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/faceunlock/faceapp.mdt:$(TARGET_COPY_OUT_VENDOR)/etc/faceunlock/faceapp.mdt \
+    vendor/oneplus/sm8150-common/proprietary/vendor/etc/faceunlock/resources.zip:$(TARGET_COPY_OUT_VENDOR)/etc/faceunlock/resources.zip \
     vendor/oneplus/sm8150-common/proprietary/vendor/etc/flp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/flp.conf \
     vendor/oneplus/sm8150-common/proprietary/vendor/etc/gnss_antenna_info.conf:$(TARGET_COPY_OUT_VENDOR)/etc/gnss_antenna_info.conf \
     vendor/oneplus/sm8150-common/proprietary/vendor/etc/gpfspath_oem_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/gpfspath_oem_config.xml \
