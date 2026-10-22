@@ -62,7 +62,13 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8150-common/proprietary/odm/lib64/camera/fdconfigpreviewlite.bin:$(TARGET_COPY_OUT_ODM)/lib64/camera/fdconfigpreviewlite.bin \
     vendor/oneplus/sm8150-common/proprietary/odm/lib64/camera/fdconfigvideo.bin:$(TARGET_COPY_OUT_ODM)/lib64/camera/fdconfigvideo.bin \
     vendor/oneplus/sm8150-common/proprietary/odm/lib64/camera/fdconfigvideolite.bin:$(TARGET_COPY_OUT_ODM)/lib64/camera/fdconfigvideolite.bin \
+    vendor/oneplus/sm8150-common/proprietary/product/etc/default-permissions/com.oneplus.camera.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/default-permissions/com.oneplus.camera.xml \
+    vendor/oneplus/sm8150-common/proprietary/product/etc/permissions/com.oneplus.camera.service.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.oneplus.camera.service.xml \
+    vendor/oneplus/sm8150-common/proprietary/product/etc/permissions/com.oneplus.camera.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.oneplus.camera.xml \
+    vendor/oneplus/sm8150-common/proprietary/product/etc/permissions/com.oneplus.gallery.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.oneplus.gallery.xml \
+    vendor/oneplus/sm8150-common/proprietary/product/etc/permissions/oplus_google_lens_config.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/oplus_google_lens_config.xml \
     vendor/oneplus/sm8150-common/proprietary/product/etc/sysconfig/com.android.hotwordenrollment.common.util.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/com.android.hotwordenrollment.common.util.xml \
+    vendor/oneplus/sm8150-common/proprietary/product/etc/sysconfig/oneplus-hiddenapi.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/oneplus-hiddenapi.xml \
     vendor/oneplus/sm8150-common/proprietary/system/etc/default-permissions/default-com.shadov.dtsx.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/default-permissions/default-com.shadov.dtsx.xml \
     vendor/oneplus/sm8150-common/proprietary/system/etc/permissions/dtsaudio.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/dtsaudio.xml \
     vendor/oneplus/sm8150-common/proprietary/system/etc/permissions/privapp-permissions-com.shadov.umbra.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-com.shadov.umbra.xml \
@@ -242,7 +248,6 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8150-common/proprietary/vendor/etc/init/vendor.display.color@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.display.color@1.0-service.rc \
     vendor/oneplus/sm8150-common/proprietary/vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.dolby.hardware.dms@2.0-service.rc \
     vendor/oneplus/sm8150-common/proprietary/vendor/etc/init/vendor.dolby.media.c2@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.dolby.media.c2@1.0-service.rc \
-    vendor/oneplus/sm8150-common/proprietary/vendor/etc/init/vendor.oplus.hardware.cameraMDM@2.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.oplus.hardware.cameraMDM@2.0-service.rc \
     vendor/oneplus/sm8150-common/proprietary/vendor/etc/init/vendor.qti.adsprpc-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.adsprpc-service.rc \
     vendor/oneplus/sm8150-common/proprietary/vendor/etc/init/vendor.qti.cdsprpc-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.cdsprpc-service.rc \
     vendor/oneplus/sm8150-common/proprietary/vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.alarm@1.0-service.rc \
@@ -324,6 +329,7 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sm8150-common/proprietary/vendor/radio/qcril_database/upgrade/7_version_update_ecc_table.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/7_version_update_ecc_table.sql
 
 PRODUCT_PACKAGES += \
+    vendor.oplus.hardware.cammidasservice@1.0_system \
     eglSubDriverAndroid \
     libEGL_adreno \
     libGLESv1_CM_adreno \
@@ -335,15 +341,26 @@ PRODUCT_PACKAGES += \
     vulkan.adreno \
     libC2D2 \
     libCB \
+    libOmxVpp \
     libOpenCL \
     libOpenCL_adreno \
+    libSTDualCamCaptureWT \
+    libSuperSensor \
+    libSuperSensorFallback \
+    libSuperSensorProcessor \
+    libSuperSensorProcessorCWrapper \
     libVkLayer_q3dtools \
+    lib_oneplus_watermark \
     libadreno_utils \
     libadsprpc \
     libc2d30_bltlib \
     libcdsp_default_listener \
     libcdsprpc \
     libconfigdb \
+    libcvp \
+    libcvp_common \
+    libcvp_stub \
+    libcvpcpuRev_skel \
     libdapparamstorage-dolby \
     libdapparamstorage-spatial \
     libdapparamstorage \
@@ -394,6 +411,7 @@ PRODUCT_PACKAGES += \
     libvppclient \
     libvpphcp \
     libvpphvx \
+    libvppimmotion \
     libvpplibrary \
     libxml \
     libdlbvol \
@@ -406,6 +424,7 @@ PRODUCT_PACKAGES += \
     vendor.dolby.hardware.dms@2.0-dolby \
     vendor.dolby.hardware.dms@2.0-spatial \
     vendor.dolby.hardware.dms@2.0 \
+    vendor.qti.hardware.cvp@1.0 \
     vendor.qti.hardware.dsp@1.0 \
     vendor.qti.hardware.vpp@1.1 \
     vendor.qti.hardware.vpp@1.2 \
@@ -529,9 +548,7 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-impl-qti \
     android.hardware.gatekeeper@1.0-impl-qti \
     android.hardware.gnss@2.1-impl-qti \
-    camera.qcom \
     com.dsi.ant@1.0-impl \
-    com.qti.chi.override \
     vendor.qti.gnss@4.0-impl \
     vendor.qti.hardware.alarm@1.0-impl \
     vendor.qti.hardware.bluetooth_sar@1.1-impl \
@@ -605,7 +622,6 @@ PRODUCT_PACKAGES += \
     libcom.qti.chinodeutils \
     libcpion \
     libcvface_api \
-    libcvp_common \
     libdataitems \
     libdeccfg \
     libdisp-aba \
@@ -677,6 +693,7 @@ PRODUCT_PACKAGES += \
     librilqmiservices \
     librpmb \
     libsdedrm \
+    libsdk_sr \
     libsdm-color \
     libsdm-colormgr-algo \
     libsdm-diag \
@@ -698,10 +715,13 @@ PRODUCT_PACKAGES += \
     libssc \
     libssc_default_listener \
     libssd \
+    libst_relighting \
+    libstblur_capture_api \
     libswregistrationalgo \
     libsystem_health_mon \
     libtime_genoff \
     libtinyxml2_1 \
+    libtriplecam_image_optical_zoom \
     libtriplecam_optical_zoom_control \
     libtriplecam_video_optical_zoom \
     libtrustedapploader \
@@ -727,7 +747,6 @@ PRODUCT_PACKAGES += \
     vendor.display.color@1.5 \
     vendor.display.postproc@1.0 \
     vendor.dolby.hardware.dms@2.0-impl \
-    vendor.oplus.hardware.cameraMDM@2.0 \
     vendor.oplus.hardware.cammidasservice@1.0 \
     vendor.qti.data.factory@2.0 \
     vendor.qti.data.factory@2.1 \
@@ -817,8 +836,34 @@ PRODUCT_PACKAGES += \
     vendor_lib_rfsa_adsp_libproxy_skel_so \
     vendor_lib_rfsa_adsp_libscveObjectSegmentation_skel_so \
     vendor_lib_rfsa_adsp_libscveT2T_skel_so \
+    vendor_lib_rfsa_adsp_libsnpe_dsp_v66_domains_v2_skel_so \
     vendor_lib_rfsa_adsp_libsns_device_mode_skel_so \
     vendor_lib_rfsa_adsp_libsns_low_lat_stream_skel_so \
+    vendor_lib_rfsa_adsp_oemconfig_so \
+    prebuilt_libAPSClient-cmd-jni \
+    prebuilt_libAPSClient-jni \
+    prebuilt_libAncFilter_jni \
+    prebuilt_libAncHumBokeh-jni \
+    prebuilt_libAncHumanDoubleExposure-jni \
+    prebuilt_libAncHumanRetain-jni_v2 \
+    prebuilt_libAncHumanSegFigureFusion-jni \
+    prebuilt_libAncHumanVideo-jni \
+    prebuilt_libApsFaceBeautyPreviewProductJni \
+    prebuilt_libFileExtender-jni \
+    prebuilt_libOplusBlurPreviewJNI \
+    prebuilt_libSuperTextWrapper \
+    prebuilt_libXDocProcessSDK-jni \
+    prebuilt_libXDocProcessSDK \
+    prebuilt_libYTCommon \
+    prebuilt_libextendfile \
+    prebuilt_libjnisingleblur_api \
+    prebuilt_libjnistblur_api \
+    prebuilt_libmpbase \
+    prebuilt_liboplusCode \
+    prebuilt_libsingle_camera_bokeh_native \
+    prebuilt_libjnistblur_api.qti_sysext \
+    prebuilt_vendor.oplus.hardware.cameraMDM@1.0_sysext \
+    prebuilt_vendor.oplus.hardware.cameraMDM@2.0_sysext \
     vendor.qti.diaghal@1.0 \
     com.qualcomm.qti.dpm.api@1.0 \
     lib-imsvideocodec \
@@ -871,11 +916,6 @@ PRODUCT_PACKAGES += \
     fingerprint.20828_goodix9678.default \
     fingerprint.goodix9608_G5.default \
     fingerprint.goodix9638_G6.default \
-    libarcsoft_dualcam_bokeh_api \
-    libarcsoft_dualcam_refocus_left \
-    libarcsoft_dualcam_refocus_preview \
-    libarcsoft_dualcam_refocus_right \
-    libarcsoft_dualcam_refocus_uw \
     libgf_hal_19805_G6_3_oplus \
     libgf_hal_19805_G6_7_oplus \
     libgf_hal_19811_G6_oplus \
@@ -919,6 +959,7 @@ PRODUCT_PACKAGES += \
     PowerOffAlarm \
     HotwordEnrollmentOKGoogleWCD9340 \
     HotwordEnrollmentXGoogleWCD9340 \
+    OnePlusCameraService \
     ImsRcsService \
     QtiTelephony \
     QtiTelephonyService \
@@ -963,7 +1004,6 @@ PRODUCT_PACKAGES += \
     vendor.display.color@1.0-service \
     vendor.dolby.hardware.dms@2.0-service \
     vendor.dolby.media.c2@1.0-service \
-    vendor.oplus.hardware.cameraMDM@2.0-service \
     vendor.qti.hardware.alarm@1.0-service \
     vendor.qti.hardware.capabilityconfigstore@1.0-service \
     vendor.qti.hardware.qseecom@1.0-service \
@@ -1037,4 +1077,5 @@ PRODUCT_BOOT_JARS += \
     WfdCommon
 
 PRODUCT_PACKAGES += \
-    libaudiohal@6.0
+    libaudiohal@6.0 \
+    prebuilt_libCameraMDMHelper@2.0
