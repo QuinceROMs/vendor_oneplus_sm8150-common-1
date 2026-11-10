@@ -946,7 +946,6 @@ PRODUCT_PACKAGES += \
     oplus.sensors.ssc \
     sensors.hal.tof \
     vendor.oplus.hardware.appradio@1.0 \
-    vendor.oplus.hardware.commondcs@1.0 \
     vendor.oplus.hardware.ims@1.0 \
     vendor.oplus.hardware.oplusSensor@1.0 \
     vendor.oplus.hardware.radio@1.0 \
